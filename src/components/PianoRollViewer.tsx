@@ -13,7 +13,6 @@ export const PianoRollViewer = ({ midiUrl, noteCount, playerRef }: PianoRollView
   const [isFullscreen, setIsFullscreen] = useState(false);
   const [visualizerType, setVisualizerType] = useState<'piano-roll' | 'waterfall'>('waterfall');
   const [zoomLevel, setZoomLevel] = useState(1);
-  const [scrollPosition, setScrollPosition] = useState(0);
 
   useEffect(() => {
     if (!visualizerRef.current) return;
@@ -99,7 +98,6 @@ export const PianoRollViewer = ({ midiUrl, noteCount, playerRef }: PianoRollView
 
   const handleResetZoom = () => {
     setZoomLevel(1);
-    setScrollPosition(0);
     if (visualizerRef.current) {
       visualizerRef.current.scrollLeft = 0;
     }

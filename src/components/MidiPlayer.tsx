@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Play, Pause, SkipBack, Volume2, VolumeX, Repeat, Repeat1 } from 'lucide-react';
+import { Play, Pause, SkipBack, Volume2, VolumeX, Repeat } from 'lucide-react';
 
 interface MidiPlayerProps {
   midiUrl: string;
